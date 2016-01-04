@@ -11,7 +11,8 @@ var fit = require('canvas-fit')
   var ctx = canvas.getContext('2d')
   var h = canvas.height/2
 
-
+var Gamepad = require("html5-gamepad");
+var gamepad = new Gamepad();
 
 var mn = require("./mathnode.js")
 a = new mn(null, "=")
@@ -50,14 +51,14 @@ document.addEventListener("keydown", function(e){
 a.draw(canvas, ctx, canvas.width/2, canvas.height/2, 100)
 
 function render(){
-  // console.log("gamepads : " + gamepad.count())
+  gamepad.update()
+  console.log("gamepads : " + gamepad.count())
   ctx.clearRect(0,0, canvas.width, canvas.height)
   window.requestAnimationFrame(render)
   a.draw(canvas, ctx, canvas.width/2, canvas.height/2, 150)
   a.trace(canvas, ctx, canvas.width/2, canvas.height/2, 150, select.slice())
 
-// console.log(gamepad.update())
-  // if (gamepad.button(0, "a")){
-  //   console.log("AHHHH")
-  // }
+  if (gamepad.button(0, "dpad x")){
+    console.log("AHHHH")
+  }
 } render()

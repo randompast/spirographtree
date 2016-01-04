@@ -5,7 +5,8 @@
   "main": "test.js",
   "dependencies": {
     "canvas-fit": "^1.5.0",
-    "es6-shim": "^0.34.0"
+    "es6-shim": "^0.34.0",
+    "html5-gamepad": "^0.1.1"
   },
   "devDependencies": {},
   "scripts": {
