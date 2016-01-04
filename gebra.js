@@ -58,7 +58,7 @@ function render(){
   a.draw(canvas, ctx, canvas.width/2, canvas.height/2, 150)
   a.trace(canvas, ctx, canvas.width/2, canvas.height/2, 150, select.slice())
 
-  if (gamepad.button(0, "dpad x")){
+  if (gamepad.axis(0, "dpad x")){
     console.log("AHHHH")
   }
 } render()
