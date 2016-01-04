@@ -1,0 +1,16 @@
+{
+  "name": "gebra",
+  "version": "0.0.1",
+  "description": "algebra game",
+  "main": "test.js",
+  "dependencies": {
+    "canvas-fit": "^1.5.0",
+    "es6-shim": "^0.34.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "budo --live --open gebra.js"
+  },
+  "author": "",
+  "license": "Pending..."
+}
